@@ -42,8 +42,8 @@ newGame.on('click', (e)=>{
 
 box.mouseenter(function (e){
 currentBox = e.target; //set currentBox to value to create jQuery obect
-if (player1){$(currentBox).css("background-image", "url(img/o.svg)")};
-if (player2){$(currentBox).css("background-image", "url(img/x.svg)")};
+if (player1 && currentBox.className === "box"){$(currentBox).css("background-image", "url(img/o.svg)")};
+if (player2 && currentBox.className === "box"){$(currentBox).css("background-image", "url(img/x.svg)")};
 });
 box.mouseout(function(e){
   e.target.style.background = "";
